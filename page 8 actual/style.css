@@ -1,0 +1,126 @@
+/* General body styles */
+body {
+    background-color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    color: #514733;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+header a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Title styles */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+    color: #000000;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+/* Artwork styles */
+.art {
+    position: relative;
+    width: 50%;
+}
+
+.art img {
+    width: 100%;
+    border: 5px solid #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay styles */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(197, 0, 0, 0.8);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.art:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Secondary overlay styles */
+/* Secondary overlay (Overlay2) styles */
+.overlay2 {
+    display: none; /* Initially hidden */
+    position: relative; /* Positioned relative to the container */
+    background-color: #f4f4f4; /* Light background for contrast */
+    border: 2px solid #bf0000; /* Match the main theme color */
+    color: #000000; /* Text color matching the main theme */
+    font-family: 'Courier New', Courier, monospace; /* Consistent typeface */
+    font-size: 14px; /* Small but readable font */
+    padding: 40px; /* Add some spacing inside the box */
+    margin: 8px auto; /* Center below the artwork */
+    width: 40%; /* Adjust width to fit well below the images */
+    border-radius: 6px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align text */
+}
+
+/* Display Overlay2 when the image is hovered */
+.art:hover + .overlay2 {
+    display: block; /* Show the overlay2 text box */
+}
+
+/* Optional: Add animation for smoother appearance */
+.overlay2 {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.art:hover + .overlay2 {
+    opacity: 1;
+}
+
